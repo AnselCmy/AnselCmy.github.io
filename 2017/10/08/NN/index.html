@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        神经网络 · fi3ework&#39;s Studio
+        简单神经网络的数学推导 · Ansel&#39;s Site
         
     </title>
     <link rel="icon" href= /assests/favicon.ico>
@@ -78,14 +78,14 @@
     
     <div class="banner">
             <div class="blog-title">
-                <a href="/" >fi3ework&#39;s Studio.</a>
+                <a href="/" >Ansel&#39;s Site</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">神经网络</a>
+                <a href="#" class="post-name">简单神经网络的数学推导</a>
             </div>
     </div>
     
-    <a class="home-link" href=/>fi3ework's Studio.</a>
+    <a class="home-link" href=/>Ansel's Site</a>
 </header>
     <div class="wrapper">
         <div class="site-intro">
@@ -95,14 +95,14 @@
     
     <!-- 404页  -->
             
-    <div class="site-intro-img" style="background-image: url(http://oumn0o088.bkt.clouddn.com/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/images/NN.png)"></div>
     <div class="site-intro-placeholder"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            神经网络
+            简单神经网络的数学推导
             <!-- 404 -->
             
         </h1>
@@ -118,9 +118,17 @@
         
             <!-- 文章页标签  -->
             
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Deep Learning>Deep Learning</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = Neural Networks>Neural Networks</a>
+    
+</div>
+            
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2017/09/15</span>
+                <span class="post-intro-time">2017/10/08</span>
             </div>
         
     </div>
@@ -128,11 +136,12 @@
         <div class="container">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="神经网络概述"><a href="#神经网络概述" class="headerlink" title="神经网络概述"></a>神经网络概述</h2><p>基本的神经网络如下图</p>
+        <p>在接触了神经网络的数学方面的推导之后，刚开始感觉非常繁杂，又因为看了很多不同的版本推导，非常混乱，没有把握住核心知识，一直没有机会把这方面的推导公式做一个记录。刚好最近听了Andrew Ng在coursera上的<a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank" rel="external">Deep Learning</a>的课程，课程里有非常详细的神经网络反向传播的推导，我就借此机会做一个梳理。</p>
+<h2 id="神经网络概述"><a href="#神经网络概述" class="headerlink" title="神经网络概述"></a>神经网络概述</h2><p>基本的神经网络如下图</p>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
-<p><img src="../_images/NN1.png"></p>
+<p><img src="/images/NN1.png"></p>
 <p style="text-align:center">图1</p>
 
 <p>我们把 [\(x_1\), \(x_1\), \(x_3\)]称之为神经网络的<strong>输入层</strong>(input layer)，中间的层称之为<strong>隐藏层</strong>(hidden layer), 最后一层神经元称之为<strong>输出层</strong>(output layer)。这里的\(\hat{y}\)表示的是通过神经网络预测的输出值。</p>
@@ -207,13 +216,6 @@
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2017/10/08/hello-world/" title= Hello World >
-                    <span>Next Post</span>
-                    <span>Hello World</span>
-                </a>
-            </li>
-        
         
     </ul>
     <!-- 评论插件 -->
@@ -244,12 +246,6 @@
         
             
                 <a href="emailto:anselcmy@foxmail.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="/atom.xml" class="iconfont-archer rss" target="_blank" title="rss"></a>
             
         
     
@@ -295,14 +291,7 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 2 </div>
+    <div class="total-archive"> Total : 1 </div>
     
     <div class="post-archive">
     
@@ -314,18 +303,17 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">10/08</span><a class="archive-post-title" href= "/2017/10/08/hello-world/" >Hello World</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/15</span><a class="archive-post-title" href= "/2017/09/15/NN/" >神经网络</a>
+            <span class="archive-post-date">10/08</span><a class="archive-post-title" href= "/2017/10/08/NN/" >简单神经网络的数学推导</a>
         </li>
     
     </div>
   </div>
         <div class="sidebar-tags">
     <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">Deep Learning</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">Neural Networks</a></span>
     
     </div>
     <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
