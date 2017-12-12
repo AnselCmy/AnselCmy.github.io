@@ -1,109 +1,86 @@
+
+
 <!DOCTYPE html>
 <html>
-    <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
-    <title>
-        
-        Ansel&#39;s Site
-        
-    </title>
-    <link rel="icon" href= /assests/favicon.ico>
-    <!-- 提前加载place holder  -->
-    <style>
-        @font-face {
-            font-family: 'Oswald-Regular';
-            src: url('/font/Oswald-Regular.ttf');
-        }
-        @font-face {
-            font-family: 'Source Sans Pro';
-            src: url('/font/Source Sans Pro.woff'),
-            url('/font/Source Sans Pro.woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: 'Source Code Pro';
-            src: url('/font/SourceCodePro-Regular.ttf.woff'),
-            url('/font/SourceCodePro-Regular.ttf.woff2');
-            font-weight: normal;
-            font-style: normal;
-        }
-        
-        
-        .site-intro-placeholder {
-        position: absolute;
-        z-index: -2;
-        top: 0;
-        left: 0px;
-        width: calc(100% + 300px);
-        height: 100%;
-        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
-        background-position: center center;
-        transform: translate3d(-226px, 0, 0);
-        animation: gradient-move 2s ease-out 0s 1;
-        }
-        @keyframes gradient-move {
-        0% {
-            transform: translate3d(-226px, 0, 0);
-        }
-        99% {
-            transform: translate3d(0, 0, 0);
-        }
-        99.1% {
-            transform: translate3d(-226px, 0, 0);
-        }
-        100% {
-            transform: translate3d(-226px, 0, 0);
-        }
-    }
-    </style>
-    <link rel="stylesheet" href = /css/style.css?v=20171005 />
-    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
-    
-    <script src="/scripts/main.js" defer></script>
-    <!-- 百度统计  -->
-    
-    <!-- 谷歌统计  -->
-    
-    
-    <script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?...">
-</script>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+  <title>Ansel&#39;s Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="手工实现简单神经网络我们在这里对于整个手工实现神经网络的逻辑是，先初始化整个类12345678910111213141516171819202122接下来我们对这个需要手工实现的神经网络类。### 所需要```__init__```的变量因为我们在进行正向传播和反向传播的过程中，需要保存下过程中所计算的值，在实作的过程中，我们通过```list```的结构进行保存，这样的好处在于我们可以直接通过i">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ansel&#39;s Site">
+<meta property="og:url" content="http://yoursite.com/NN_by_Hand.html">
+<meta property="og:site_name" content="Ansel&#39;s Site">
+<meta property="og:description" content="手工实现简单神经网络我们在这里对于整个手工实现神经网络的逻辑是，先初始化整个类12345678910111213141516171819202122接下来我们对这个需要手工实现的神经网络类。### 所需要```__init__```的变量因为我们在进行正向传播和反向传播的过程中，需要保存下过程中所计算的值，在实作的过程中，我们通过```list```的结构进行保存，这样的好处在于我们可以直接通过i">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2017-10-13T01:42:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ansel&#39;s Site">
+<meta name="twitter:description" content="手工实现简单神经网络我们在这里对于整个手工实现神经网络的逻辑是，先初始化整个类12345678910111213141516171819202122接下来我们对这个需要手工实现的神经网络类。### 所需要```__init__```的变量因为我们在进行正向传播和反向传播的过程中，需要保存下过程中所计算的值，在实作的过程中，我们通过```list```的结构进行保存，这样的好处在于我们可以直接通过i">
+  
+    <link rel="alternative" href="/atom.xml" title="Ansel&#39;s Site" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]--><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
 </head>
-    
-    
-<header class="header">
-
-    <div class="header-sidebar-menu">&#xe775;</div>
-    <!-- post页的toggle banner  -->
-    
-    <a class="home-link" href=/>Ansel's Site</a>
-</header>
-    <div class="wrapper">
-        <div class="site-intro">
-    
-    <!-- 主页  -->
-            
-    <div class="site-intro-img" style="background-image: url(/)"></div>
-    <div class="site-intro-placeholder"></div>
-    <div class="site-intro-meta">
-        <!-- 标题  -->
-        <h1 class="intro-title">
-            <!-- 主页  -->
-            
-        </h1>
-        <!-- 副标题 -->
-        <p class="intro-subtitle">
-            <!-- 主页副标题  -->
-            
-        <!-- 文章页meta -->
-        
+<body>
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Ansel&#39;s Site</a>
+      </h1>
+      
     </div>
-</div>
-        <div class="container">
-            <main class="main post-page">
-    <article class="article-entry">
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" class="search-form">
+          <input type="search" name="word" maxlength="20" class="search-form-input" placeholder="Search">
+          <input type="submit" value="" class="search-form-submit">
+          <input name=tn type=hidden value="bds">
+          <input name=cl type=hidden value="3">
+          <input name=ct type=hidden value="2097152">
+          <input type="hidden" name="si" value="yoursite.com">
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
+    <div class="outer">
+      <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/NN_by_Hand.html" class="article-date">
+  <time datetime="2017-10-13T01:42:30.000Z" itemprop="datePublished">2017-10-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
         <h2 id="手工实现简单神经网络"><a href="#手工实现简单神经网络" class="headerlink" title="手工实现简单神经网络"></a>手工实现简单神经网络</h2><p>我们在这里对于整个手工实现神经网络的逻辑是，先初始化整个类<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">接下来我们对这个需要手工实现的神经网络类。</div><div class="line"></div><div class="line">### 所需要```__init__```的变量</div><div class="line"></div><div class="line">因为我们在进行正向传播和反向传播的过程中，需要保存下过程中所计算的值，在实作的过程中，我们通过```list```的结构进行保存，这样的好处在于我们可以直接通过index的方式找到相应index的层的值，例如，```W[1]```可以表示神经网络第一层的```W```参数，我们通过以下的代码进行初始化  </div><div class="line"></div><div class="line">```python</div><div class="line">class nn_model:</div><div class="line">	def __init__(self, layers_dims):</div><div class="line">		self.layers_dims = layers_dims</div><div class="line">		self.L = len(self.layers_dims)-1 # sub 1 for input layer</div><div class="line">		# variable of Z and A, we don&apos;t use the index 0</div><div class="line">		self.A = [None for i in range(self.L+1)]</div><div class="line">		self.Z = [None for i in range(self.L+1)]</div><div class="line">		self.dA = [None for i in range(self.L+1)]</div><div class="line">		self.dZ = [None for i in range(self.L+1)]</div><div class="line">		# parameter of W and b, we don&apos;t use the index 0</div><div class="line">		self.W = [None for i in range(self.L+1)]</div><div class="line">		self.b = [None for i in range(self.L+1)]</div><div class="line">		self.dW = [None for i in range(self.L+1)]</div><div class="line">		self.db = [None for i in range(self.L+1)]</div></pre></td></tr></table></figure></p>
 <p>我们把神经网络放在一个<figure class="highlight plain"><figcaption><span>5, 2]```就表示一个三层的神经网络，从第一层到第三层每一层的神经元的个数是3，5，2。</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">我们对构造函数的每一个值进行解释  </div><div class="line"></div><div class="line">| 变量 | 定义 |</div><div class="line">| ------| ------ | </div><div class="line">|```self.L```|神经网络的层数，是去掉输入层的层数|</div><div class="line">|```self.A```|每一层的a值的列表，也就是经过激活函数的值，但是第0层是输入值，也就是X|</div><div class="line">|```self.Z```|每一层的z值的列表，也就是经过线性函数的值，第0层没有，所以我们空着|</div><div class="line">|```self.dA```|每一层的a值的对于损失函数的导数的列表，也就是\\(\frac&#123;dJ&#125;&#123;da&#125;\\)的列表|</div><div class="line">|```self.dZ```|每一层的z值的对于损失函数的导数的列表，也就是\\(\frac&#123;dJ&#125;&#123;dz&#125;\\)的列表|</div><div class="line">|```self.W```|每一层的w值矩阵的列表，也就是对进行从a到z的线性变换函数的系数|</div><div class="line">|```self.b```|每一层的b值向量的列表，也就是对进行从a到z的线性变换函数的偏置|</div><div class="line">|```self.dW```|每一层的w值的对于损失函数的导数的列表，也就是\\(\frac&#123;dJ&#125;&#123;dW&#125;\\)的列表|</div><div class="line">|```self.db```|每一层的b值的对于损失函数的导数的列表，也就是\\(\frac&#123;dJ&#125;&#123;db&#125;\\)的列表|</div><div class="line"></div><div class="line">可以看出我们在初始化例如```W```这一类参数的列表的时候，并没有因为在第0层没有这样的参数，而少初始化一层，我们恰恰初始化了第0层的参数为```None```，但是我们并没有用，因为我们想在后面使用```W[1]```的时候就表示第一层的W值，而不是要用```W[0]```很蹩脚的表示第一层。</div><div class="line"></div><div class="line">### 初始化参数</div><div class="line"></div><div class="line">```python</div><div class="line">def initial_params(self):</div><div class="line">    for i in range(1, self.L+1): # iter from 1 ~ L layer</div><div class="line">        self.W[i] = np.random.randn(self.layers_dims[i], self.layers_dims[i-1])*0.01</div><div class="line">        self.b[i] = np.zeros((self.layers_dims[i], 1))</div><div class="line">        # take a assert for the certain dimension</div><div class="line">        assert(self.W[i].shape == (self.layers_dims[i], self.layers_dims[i-1]))</div><div class="line">        assert(self.b[i].shape == (self.layers_dims[i], 1))</div></pre></td></tr></table></figure></p>
 <p>将参数初始化的时候，我们需要注意只需要初始化第1到L层的<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">```参数只是简单的用随机数初始化，并且乘0.01为了防止刚开始初始化的```W```参数太大而导致梯度下降的时候效果不明显，因为我们之后输出层要使用到```sigmoid```作为激活函数，因为这里只是简单的实现，我们更多的是理解反向传播，梯度下降，并没有在意太多的优化算法。</div><div class="line"></div><div class="line">### 赋值训练数据```X, Y</div></pre></td></tr></table></figure></p>
@@ -116,138 +93,203 @@
 <h3 id="反向传播"><a href="#反向传播" class="headerlink" title="反向传播"></a>反向传播</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">linear_activation_backward</span><span class="params">(self, dZ_next, Z, W_next, activation)</span>:</span></div><div class="line">    dA = np.dot(W_next.T, dZ_next)</div><div class="line">    <span class="keyword">if</span> activation == <span class="string">'sigmoid'</span>:</div><div class="line">        dZ = dA*self.sigmoid_prime(Z)</div><div class="line">    <span class="keyword">elif</span> activation == <span class="string">'relu'</span>:</div><div class="line">        dZ = dA*self.relu_prime(Z)</div><div class="line">    <span class="keyword">return</span> dA, dZ</div></pre></td></tr></table></figure>
 <p>这里的函数是介绍了我们知道<figure class="highlight plain"><figcaption><span>dA[i]```的过程，我们再进行一层打包，就可以将函数变成如下的```self.backward()```对每一层进行反向传播并计算变量对损失函数的导数。  </span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">相关反向传播的公式如下：  </div><div class="line">对于最后一层，因为我们使用的是```sigmoid```最为最后一层的激活函数</div><div class="line">$$\frac&#123;dJ&#125;&#123;dW^&#123;[l]&#125;&#125; = \frac&#123;1&#125;&#123;m&#125;A^&#123;[l-1]&#125;\frac&#123;dJ&#125;&#123;dZ^&#123;[l]&#125;&#125; \tag&#123;2&#125;$$</div><div class="line">$$\frac&#123;dJ&#125;&#123;db^&#123;[l]&#125;&#125; = \frac&#123;1&#125;&#123;m&#125;\frac&#123;dJ&#125;&#123;dZ^&#123;[l]&#125;&#125; \tag&#123;19&#125;$$</div><div class="line"></div><div class="line">```python        </div><div class="line">def backward(self):    </div><div class="line">    # the last dZ is often computed by hand</div><div class="line">    self.dZ[-1] = self.A[-1] - self.Y</div><div class="line">    self.dW[-1] = (1./self.m) * np.dot(self.dZ[-1], self.A[-2].T)</div><div class="line">    self.db[-1] = (1./self.m) * np.sum(self.dZ[-1], axis=1, keepdims=True)</div><div class="line">    </div><div class="line">    # iter from L-1 to 1 layer</div><div class="line">    for i in range(self.L-1, 0, -1):</div><div class="line">        dZ_next = self.dZ[i+1]</div><div class="line">        Z = self.Z[i]</div><div class="line">        W_next = self.W[i+1]</div><div class="line">        self.dA[i], self.dZ[i] = self.linear_activation_backward(dZ_next, Z, W_next, &apos;relu&apos;)</div><div class="line">        # dw, db</div><div class="line">        self.dW[i] = (1./self.m) * np.dot(self.dZ[i], self.A[i-1].T)</div><div class="line">        self.db[i] = (1./self.m) * np.sum(self.dZ[i], axis=1, keepdims=True)</div><div class="line">        assert(self.dW[i].shape == self.W[i].shape)</div><div class="line">        assert(self.db[i].shape == self.b[i].shape)</div></pre></td></tr></table></figure></p>
 
-    </article>
-    <!-- 前后页  -->
-    <ul class="post-pager">
-        
-        
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
+      
+    </div>
+    <footer class="article-footer">
+      
+        <a data-url="http://yoursite.com/NN_by_Hand.html" data-id="cj9vao5mb00007p8v2vz0k4pn" class="article-share-link">Share</a>
+      
 
-<!-- City版安装代码已完成 -->
-    
-    
-    <!--PC版-->
+      
+        <a href="http://yoursite.com/NN_by_Hand.html#ds-thread" class="article-comment-link">Comments</a>
+      
 
+      
+    </footer>
+  </div>
+  
     
-</main>
-            <!-- profile -->
-            
-        </div>
-        <footer class="footer">
-    <!-- social  -->
-    
-    <div class="social">
-        
-    
-        
-            
-                <a href="https://github.com/AnselCmy" class="iconfont-archer github" target="_blank" title="github"></a>
-            
-        
-    
+  
+</article>
 
-    </div>
+
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="NN_by_Hand.html" data-title="" data-url="http://yoursite.com/NN_by_Hand.html"></div>
+  </section>
+</section>
+      
+      <aside id="sidebar">
+  
     
-    <!-- powered by Hexo  -->
-    <div class="copyright">
-        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
-    </div>
-    <!-- 不蒜子  -->
+  
     
-</footer>
-    </div>
-    <!-- toc -->
-    
-    <div class="back-top">&#xe639;</div>
-    <div class="sidebar">
-    <div class="sidebar-header">
-        <div class="sidebar-category">
-            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
-            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
-        </div>
-    </div>
-    <div class="sidebar-content sidebar-content-show-archive">
-          <div class="sidebar-archive">
-    <!-- 在ejs中将archive按照时间排序 -->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="total-archive"> Total : 1 </div>
-    
-    <div class="post-archive">
-    
-    
-    
-    
-    <div class="archive-year"> 2017 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">10/08</span><a class="archive-post-title" href= "/2017/10/08/NN/" >简单神经网络的数学推导</a>
-        </li>
-    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deep-Learning/">Deep Learning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Neural-Networks/">Neural Networks</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
-        <div class="sidebar-tags">
-    <div class="sidebar-tags-name">
-    
-        <span class="sidebar-tag-name"><a href= "#">Deep Learning</a></span>
-    
-        <span class="sidebar-tag-name"><a href= "#">Neural Networks</a></span>
-    
-    </div>
-    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
-    缺失模块。<br/>
-    1、请确保node版本大于6.2<br/>
-    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
-    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
-    3、在根目录_config.yml里添加配置：
-    <pre style="color: #888; font-size: 0.6rem;">
-jsonContent:
-  meta: false
-  pages: false
-  posts:
-    title: true
-    date: true
-    path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: false
-    tags: true</pre>
-    </div> 
-    <div class="sidebar-tag-list"></div>
-</div>
-    </div>
-</div> 
-    <script>
-    var jsInfo = {
-        root: '/'
-    }
-</script>
-    <!-- 不蒜子  -->
-    
-    <!-- CNZZ统计  -->
-    
-    </div>
-    </body>
-</html>
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Deep-Learning/" style="font-size: 10px;">Deep Learning</a> <a href="/tags/Neural-Networks/" style="font-size: 10px;">Neural Networks</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/10/08/NN/">简单神经网络的数学推导</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Links</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="https://dezsoranki.github.io/" target="_blank">Dezso Ranki</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Ansel Chen<br>
+      Powered by <a href="//hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/xiangming/landscape-plus" target="_blank">Landscape-plus</a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+  <!-- totop start -->
+<div id="totop">
+<a title="totop"><img src="/img/scrollup.png"/></a>
+</div>
+
+<!-- totop end -->
+
+<!-- 多说公共js代码 start -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"reqianduan"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共js代码 end -->
+
+
+<!-- 百度分享 start -->
+
+<!-- 百度分享 end -->
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+<! -- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+                processEscapes: true
+                    
+}
+  
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+                  
+}
+    
+        });
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Queue(function() {
+            var all = MathJax.Hub.getAllJax(), i;
+            for(i=0; i < all.length; i += 1) {
+                            all[i].SourceElement().parentNode.className += ' has-jax';
+                                    
+            }
+                
+        });
+</script>
+
+<script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.5.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<script src="/js/script.js"></script>
+
+</div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
 
