@@ -4,15 +4,24 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Ansel&#39;s Site</title>
+  <title>C++手工实现boxFilter | Ansel&#39;s Site</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Ansel&#39;s Site">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="在图像处理中，我们常常用图像滤波的方法来消除图像的噪声，或者提取图像的一些特征。在图像滤波中，方框滤波（boxFilter）是一种常见的线性滤波器。 方框滤波所用到的kernel如下， 可以看出这种滤波的方法非常简单，就是让kernel在原图像中移动然后计算出相应的值放到目标图像中。 这里提供两种手动实现方框滤波的方法。 1.四层for循环实现直观的可以感受到，我们可以用多次的for循环就实现方框">
+<meta name="keywords" content="Computer Vision">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++手工实现boxFilter">
+<meta property="og:url" content="http://yoursite.com/2017/12/13/boxFilter/index.html">
 <meta property="og:site_name" content="Ansel&#39;s Site">
+<meta property="og:description" content="在图像处理中，我们常常用图像滤波的方法来消除图像的噪声，或者提取图像的一些特征。在图像滤波中，方框滤波（boxFilter）是一种常见的线性滤波器。 方框滤波所用到的kernel如下， 可以看出这种滤波的方法非常简单，就是让kernel在原图像中移动然后计算出相应的值放到目标图像中。 这里提供两种手动实现方框滤波的方法。 1.四层for循环实现直观的可以感受到，我们可以用多次的for循环就实现方框">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://oxhtmiy09.bkt.clouddn.com/boxFilter_1.png">
+<meta property="og:image" content="http://oxhtmiy09.bkt.clouddn.com/boxFilter_2.png">
+<meta property="og:image" content="http://oxhtmiy09.bkt.clouddn.com/boxFilter_3.png">
+<meta property="og:updated_time" content="2017-12-13T07:16:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ansel&#39;s Site">
+<meta name="twitter:title" content="C++手工实现boxFilter">
+<meta name="twitter:description" content="在图像处理中，我们常常用图像滤波的方法来消除图像的噪声，或者提取图像的一些特征。在图像滤波中，方框滤波（boxFilter）是一种常见的线性滤波器。 方框滤波所用到的kernel如下， 可以看出这种滤波的方法非常简单，就是让kernel在原图像中移动然后计算出相应的值放到目标图像中。 这里提供两种手动实现方框滤波的方法。 1.四层for循环实现直观的可以感受到，我们可以用多次的for循环就实现方框">
+<meta name="twitter:image" content="http://oxhtmiy09.bkt.clouddn.com/boxFilter_1.png">
   
     <link rel="alternative" href="/atom.xml" title="Ansel&#39;s Site" type="application/atom+xml">
   
@@ -64,9 +73,7 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main">
-  
-    <article id="post-boxFilter" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-boxFilter" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/12/13/boxFilter/" class="article-date">
   <time datetime="2017-12-12T16:00:00.000Z" itemprop="datePublished">2017-12-13</time>
@@ -79,8 +86,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/12/13/boxFilter/">C++手工实现boxFilter</a>
+    <h1 class="article-title" itemprop="name">
+      C++手工实现boxFilter
     </h1>
   
 
@@ -132,128 +139,25 @@
     </footer> -->
   </div>
   
-</article>
-
-<!--  -->
+    
+<nav id="article-nav">
   
-    <article id="post-NN" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/10/08/NN/" class="article-date">
-  <time datetime="2017-10-07T16:00:00.000Z" itemprop="datePublished">2017-10-08</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/08/NN/">简单神经网络的数学推导</a>
-    </h1>
+    <a href="/2017/10/08/NN/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">简单神经网络的数学推导</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在接触了神经网络的数学方面的推导之后，刚开始感觉非常繁杂，又因为看了很多不同的版本推导，非常混乱，没有把握住核心知识，一直没有机会把这方面的推导公式做一个记录。刚好最近听了Andrew Ng在coursera上的<a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" target="_blank" rel="external">Deep Learning</a>的课程，课程里有非常详细的神经网络反向传播的推导，我就借此机会做一个梳理。</p>
-<h2 id="神经网络概述"><a href="#神经网络概述" class="headerlink" title="神经网络概述"></a>神经网络概述</h2><p>基本的神经网络如下图</p>
-<p><img src="http://oxhtmiy09.bkt.clouddn.com/NN1.png"></p>
-<p style="text-align:center">图1</p>
-
-<p>我们把 [\(x_1\), \(x_1\), \(x_3\)]称之为神经网络的<strong>输入层</strong>(input layer)，中间的层称之为<strong>隐藏层</strong>(hidden layer), 最后一层神经元称之为<strong>输出层</strong>(output layer)。这里的\(\hat{y}\)表示的是通过神经网络预测的输出值。</p>
-<p>输入\(X\)经过一些线性变化(linear)和激活函数(activation)的计算最后到达输出层，这一步是前向传播，计算出损失函数之后，反向传播并且对参数从后向前作出相应的变化，再次前向传播，多次迭代。</p>
-<h2 id="前向传播-Forwarding"><a href="#前向传播-Forwarding" class="headerlink" title="前向传播(Forwarding)"></a>前向传播(Forwarding)</h2><p>在神经网络里面的前向传播指的是通过\(W, b\)等参数对\(X\)的线性变化以及激活函数的非线性变化之后，得到输出\(Y\)的过程。下面我们详述前向传播的过程。</p>
-<p>在描述前向传播之前我们先定义本文的符号表    </p>
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>定义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>\(L\)</td>
-<td>神经元层数</td>
-</tr>
-<tr>
-<td>\(n^{[i]}\)</td>
-<td>第\(i\)层的神经元的数量，\(n^{[0]}\)为输入的\(x\)的数量</td>
-</tr>
-<tr>
-<td>\(a^{[i]}\)</td>
-<td>经过第\(i\)层的激活函数后的值，是列向量，\(a^{[0]}\)为输入</td>
-</tr>
-<tr>
-<td>\(z^{[i]}\)</td>
-<td>经过第\(i\)层的线性变化之后的值，是列向量</td>
-</tr>
-<tr>
-<td>\(w^{[i]}\)</td>
-<td>第\(i\)层的w参数，是矩阵</td>
-</tr>
-<tr>
-<td>\(b^{[i]}\)</td>
-<td>第\(i\)层的b参数，是列向量</td>
-</tr>
-<tr>
-<td>\(g^{[i]}\)</td>
-<td>第\(i\)层的激活函数</td>
-</tr>
-<tr>
-<td>\(\hat{y}\)</td>
-<td>通过前向传播得到的输出值</td>
-</tr>
-<tr>
-<td>\(J\)</td>
-<td>损失函数</td>
-</tr>
-</tbody>
-</table>
-<p>现在我们假设我们的神经网络就是上面的图1所示的神经网络，具有一个隐藏层的双层的神经网络。</p>
-<p>首先我们的输入是一个维度是[3, 1]的<strong>列向量</strong>(column vector)——\(a^{[0]}\)，从输入层到第一层的神经网络我们首先会经过一个<strong>线性变化</strong>为：<br>$$z^{[1]} = w^{[1]}a^{[0]} + b^{[1]} \tag{1}$$</p>
-<p>在图1的每一个箭头可以被理解成是一次线性变换，比如从\(x^{[1]}\)到第一层的第一个神经元，我们就需要进行一次线性变化，所有很容易的知道我们的\(w^{[1]}\)应该是一个矩阵，并且维度是\([n^{[2]}, n^{[1]}]\)，在这里也就是[4，3]。</p>
-<p>我们用向量的方式表达一下(1)式：<br>$$<br>\left[\begin{matrix}    z^{[1]}_{1,1} \\<br>                            z^{[1]}_{2,1} \\<br>                            z^{[1]}_{3,1} \\<br>                            z^{[1]}_{4,1}<br>\end{matrix}\right] =<br>\left[\begin{matrix}    w^{[1]}_{1,1} &amp; w^{[1]}_{1,2} &amp; w^{[1]}_{1,3} \\<br>                            w^{[1]}_{2,1} &amp; w^{[1]}_{2,2} &amp; w^{[1]}_{2,3} \\<br>                            w^{[1]}_{3,1} &amp; w^{[1]}_{3,2} &amp; w^{[1]}_{3,3} \\<br>                            w^{[1]}_{4,1} &amp; w^{[1]}_{4,2} &amp; w^{[1]}_{4,3}<br>\end{matrix}\right]<br>\left[\begin{matrix}    a^{[0]}_{1,1} \\<br>                            a^{[0]}_{2,1} \\<br>                            a^{[0]}_{3,1}<br>\end{matrix}\right] +<br>\left[\begin{matrix}    b^{[1]}_{1,1} \\<br>                            b^{[1]}_{2,1} \\<br>                            b^{[1]}_{3,1} \\<br>                            b^{[1]}_{4,1}<br>\end{matrix}\right]<br>\tag{2}<br>$$</p>
-<p>对于我们这个具体的\(w^{[1]}\)做一下分析，比如\(w^{[1]}_{1,1}\)就是\(a^{[0]}_{1,1}\)到隐藏层的第一个神经元的\(w\)参数，\(w^{[1]}_{1,2}\)就是\(a^{[0]}_{2,1}\)到隐藏层的第一个神经元的\(w\)参数，前一层的每一个神经元都会对后一层的每一个神经元产生影响。</p>
-<p>经过线性变化后达到神经元后，就会通过激活函数，有\(z^{[1]}\)得到\(a^{[1]}\)：<br>$$a^{[1]} = g^{[1]}(z^{[1]}) \tag{3}$$</p>
-<p>这里就完成了从输入层到隐藏层的前向传播，从隐藏层到输出层的前向传播类似如下：<br>$$z^{[2]} = w^{[2]}a^{[1]} + b^{[2]} \tag{4}$$<br>$$a^{[2]} = g^{[2]}(z^{[2]}) \tag{5}$$</p>
-<p>到这里我们就完成了所有的前向传播并且得到了一个输出值\(a^{[2]}\)，我们下面来详述反向传播。</p>
-<h2 id="反向传播-Back-Propagation"><a href="#反向传播-Back-Propagation" class="headerlink" title="反向传播(Back Propagation)"></a>反向传播(Back Propagation)</h2><p>反向传播是神经网络的基础的重点部分，因为神经网络的优化就是随着反向传播的权值更新而进行的，也就是说，反向传播的作用就是对权值进行更新从而使其可以让输出得到我们想要的效果。</p>
-<p>我们之前进行前向传播并且得到了输出值\(\hat{y}\)，根据原本的训练数据的\(y\)，我们可以计算出<strong>损失函数</strong>(loss function)，这里我们使用的交叉熵损失函数(cross entropy)：<br>$$J=L(\hat{y}, y) = -(ylog\hat{y} + (1-y)log(1-\hat{y})) \tag{6}$$<br>预测值和期望值越接近的时候，损失函数接近于0。根据损失函数这一个特性，我们可以知道我们更新权值\(w\)和\(b\)的目的就是使得\(L(\hat{y}, y)\)减小。通过微积分里面偏导的定义，我们可以知道，对于权值，我们需要做的是让它向使得\(J\)变小的方向变化，这里我们引入一个<strong>学习率</strong>(learning rate)——\(lr\)在权值更新的时候，我们这样做：<br>$$w -= lr\frac{dJ}{dw} \tag{7}$$<br>$$b -= lr\frac{dJ}{db} \tag{8}$$</p>
-<p>我们从后往前来分析反向传播，以下会用到链式法则：<br>$$\frac{dJ}{da^{[2]}} = -\frac{d}{da^{[2]}}(ylog\widehat{y} + (1-y)log(1-\widehat{y})) \tag{9}$$<br>$$\frac{dJ}{dz^{[2]}}  = \frac{dJ}{da^{[2]}}\frac{da^{[2]}}{dz^{[2]}} = \frac{dJ}{da^{[2]}}{g^{[2]}}^{\prime}(z^{[2]}) \tag{10}$$<br>得到了\(\frac{dJ}{da^{[2]}}\)之后，我们再根据(4)式得到：<br>$$\frac{dJ}{dw^{[2]}} = a^{[1]}\frac{dJ}{dz^{[2]}} \tag{11}$$<br>$$\frac{dJ}{db^{[2]}} = \frac{dJ}{dz^{[2]}} \tag{12}$$<br>我们同时根据以上的计算，计算出前一层所需要的\(\frac{dJ}{da^{[1]}}\)：<br>$$\frac{dJ}{da^{[1]}} = {w^{[2]}}^{T}\frac{dJ}{dz^{[2]}} \tag{13}$$</p>
-<p>得到了\(\frac{dJ}{dw^{[2]}}\)和\(\frac{dJ}{dw^{[2]}}\)之后，就可以对\(w^{[2]}\)和\(b^{[2]}\)进行更新。</p>
-<p>之后也是重复以上的步骤进行反向传播，对每一层的参数进行更新即可。</p>
-<h2 id="前向和反向传播在某一层的分析"><a href="#前向和反向传播在某一层的分析" class="headerlink" title="前向和反向传播在某一层的分析"></a>前向和反向传播在某一层的分析</h2><p>假设我们现在到达了神经网络的第\(l\)层，我们根据这层来进行概括性的总结。</p>
-<p>对于前向传播，我们肯定知道前一层，也就是\(l-1\)层的\(a\)值，也就是说\(a^{[l-1]}\)已经知，所以我们会有以下的计算：<br>$$z^{[l]} = w^{[l]}a^{[l-1]} + b^{[l]} \tag{14}$$<br>$$a^{[l]} =g^{[l]}(z^{[l]}) \tag{15}$$<br>这时候就通过\(a^{[l-1]}\)计算出了\(a^{[l]}\)。</p>
-<p>对于反向传播，不同于前向传播以\(a\)为线索，我们一般习惯以\(\frac{dJ}{dz}\)为线索来计算，通过最后的损失函数我们可以计算出<strong>最后一层</strong>的：<br>$$\frac{dJ}{da^{[L]}} \tag{16}$$<br>并且通过(15)式我们可以得到：<br>$$\frac{dJ}{dz^{[L]}} = \frac{dJ}{da^{[L]}}\frac{da^{[L]}}{dz^{[L]}}<br> = \frac{dJ}{da^{[L]}}{g^{[L]}}^{\prime}(z^{[L]}) \tag{17}$$</p>
-<p>所以对于反向传播来说，这一层的\(\frac{dJ}{dz^{[l]}}\)我们是已知的，所以我们在第\(l\)层的反向传播，需要做以下的计算：<br>$$\frac{dJ}{dw^{[l]}} = a^{[l-1]}\frac{dJ}{dz^{[l]}} \tag{18}$$<br>$$\frac{dJ}{db^{[l]}} = \frac{dJ}{dz^{[l]}} \tag{19}$$<br>$$\frac{dJ}{da^{[l-1]}} = {w^{[l]}}^{T}\frac{dJ}{dz^{[l]}} \tag{20}$$<br>$$\frac{dJ}{dz^{[l-1]}}  = \frac{dJ}{da^{[l-1]}}\frac{da^{[l-1]}}{dz^{[l-1]}} = \frac{dJ}{da^{[l-1]}}{g^{[l-1]}}^{\prime}(z^{[l-1]}) \tag{21}$$<br>这时候就由\(z^{[l]}\)计算出了\(z^{[l-1]}\)。</p>
-
-      
-    </div>
-<!--     <footer class="article-footer">
-      
-        <a data-url="http://yoursite.com/2017/10/08/NN/" data-id="cjb4q4j4c00026l8vlbqie1hb" class="article-share-link">Share</a>
-      
-
-      
-        <a href="http://yoursite.com/2017/10/08/NN/#ds-thread" class="article-comment-link">Comments</a>
-      
-
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Deep-Learning/">Deep Learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Neural-Networks/">Neural Networks</a></li></ul>
-
-    </footer> -->
-  </div>
   
 </article>
 
-<!--  -->
-  
-
-</section>
+<!-- 
+  <section id="comments">
+    <div id="ds-thread" class="ds-thread" data-thread-key="2017/12/13/boxFilter/" data-title="C++手工实现boxFilter" data-url="http://yoursite.com/2017/12/13/boxFilter/"></div>
+  </section>
+ --></section>
       
       <aside id="sidebar">
   
